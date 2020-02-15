@@ -12,7 +12,7 @@ $nik=$_POST['nik'];
 $pdf = new FPDF('P','mm',array(219,330));
 $pdf->AddPage();
 
-$query=mysqli_query($connect,"SELECT * FROM biodata_wni WHERE NIK='$nik'");
+$query=mysqli_query($connect,"SELECT * FROM biodata_wni,data_keluarga WHERE biodata_wni.NIK='$nik' AND data_keluarga.NO_KK=biodata_wni.NO_KK");
 $data=mysqli_fetch_array($query);
 for ($ct=1;$ct<=2;$ct++){
 	//set font to Times, bold, 12pt
@@ -159,8 +159,9 @@ for ($ct=1;$ct<=2;$ct++){
 	$pdf->ln(1);
 
 	$pdf->Cell(28 ,4,'4. Alamat',1,0,'L');
+	//alamat 
 	$pdf->Cell(2 ,4,'',0,0,'L');
-	$pdf->Cell(155 ,4,'',1,1,'L');
+	$pdf->Cell(155 ,4,$data['ALAMAT'],1,1,'L');
 	$pdf->ln(1);
 	$pdf->Cell(28 ,4,'',0,0,'L');
 	$pdf->Cell(2 ,4,'',0,0,'L');
@@ -171,14 +172,21 @@ for ($ct=1;$ct<=2;$ct++){
 	$pdf->Cell(2 ,4,'',0,0,'L');
 	$pdf->Cell(10 ,4,'RT:',1,0,'L');
 	$pdf->Cell(5 ,4,'',0,0,'L');
-	for ($ul=1;$ul<=3;$ul++){
-		$pdf->Cell(5 ,4,'',1,0,'L');
+	$RT=sprintf("%03d",$data['NO_RT']);
+	$ar_RT=str_split($RT);
+	foreach ($ar_RT as $huruf) {
+		$hurufke++;
+		$hurufke==3 ? $pdf->Cell(5,4,$huruf,1,1,'L') : $pdf->Cell(5,4,$huruf,1,0,'L');
 	}
+	
 	$pdf->Cell(5 ,4,'',0,0,'L');
 	$pdf->Cell(10 ,4,'RW:',1,0,'L');
 	$pdf->Cell(5 ,4,'',0,0,'L');
-	for ($ul=1;$ul<=3;$ul++){
-		$pdf->Cell(5 ,4,'',1,0,'L');
+	$RW=sprintf("%03d",$data['NO_RW']);
+	$ar_RW=str_split($RW);
+	foreach ($ar_RW as $huruf) {
+		$hurufke++;
+		$hurufke==3 ? $pdf->Cell(5,4,$huruf,1,1,'L') : $pdf->Cell(5,4,$huruf,1,0,'L');
 	}
 	$pdf->Cell(15 ,4,'',0,0,'L');
 	$pdf->Cell(20 ,4,'Kode Pos:',1,0,'L');
