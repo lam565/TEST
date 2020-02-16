@@ -865,6 +865,259 @@ $pdf->Cell(80,$fs,"",0,0,"C");
 $pdf->Cell(50,$fs,"(........................)",0,0,"C");
 $pdf->Cell(5,$fs,"",0,1,"C");
 
+
+$pdf->AddPage();
+$pdf->SetFont('Times','B',12);
+//Cell(width , height , text , border , end line , [align] )
+$pdf->Cell(164 ,6,'',0,0,'C');
+$pdf->Cell(25 ,6,' F-1.16 ',1,1,'C');
+$pdf->ln(5);
+$pdf->SetFont('Times','B',11);
+$pdf->Cell(195,5,"FORMULIR PERMOHONAN PERUBAHAN KARTU KELUARGA (KK) WARGA NEGARA INDONESIA",0,1,"C");
+$pdf->ln(3);
+$pdf->SetFont("Times","",10);
+$fs=4;
+$pdf->Cell(5,2,"","LT");
+$pdf->Cell(185,2,"","T",0,"L");
+$pdf->Cell(5,2,"","RT",1);
+$pdf->SetFont("Times","B",10);
+$pdf->Cell(5,$fs,"","L");
+$pdf->Cell(185,$fs,"Perhatian:",0,0,"L");
+$pdf->Cell(5,$fs,"","R",1);
+$pdf->SetFont("Times","",10);
+$pdf->Cell(5,$fs,"","L");
+$pdf->Cell(185,$fs,"1. Harap diisi dengan huruf cetak dan menggunakan tinta hitam",0,0,"L");
+$pdf->Cell(5,$fs,"","R",1);
+$pdf->Cell(5,$fs,"","L");
+$pdf->Cell(185,$fs,"2. Setelah formulir diisi dan ditandatangani, harap diserahkan kembali ke Kantor Desa/Kelurahan ",0,0,"L");
+$pdf->Cell(5,$fs,"","R",1);
+$pdf->Cell(5,2,"","LB");
+$pdf->Cell(185,2,"","B",0,"L");
+$pdf->Cell(5,2,"","RB",1);
+$pdf->Cell(5,2,"","LT");
+$pdf->Cell(185,2,"","T",0,"L");
+$pdf->Cell(5,2,"","RT",1);
+
+$pdf->SetFont("Times","B",10);
+$pdf->Cell(5,$fs,"","L");
+$pdf->Cell(60,$fs,"PEMERINTAH PROPINSI",0,0,"L");
+$pdf->Cell(5,$fs," : ",0,0,"L");
+for ($ul=0;$ul<2;$ul++){
+	$pdf->Cell(5,$fs,"",1,0,"L");
+}
+$pdf->Cell(15,$fs,"",0,0,"L");
+$pdf->Cell(60,$fs,"",1,0,"L");
+$pdf->Cell(35,$fs,"",0,0,"L");
+$pdf->Cell(5,$fs,"","R",1);
+$pdf->Cell(5,$fs,"","L");
+$pdf->Cell(60,$fs,"PEMERINTAH KABUPATEN/KOTA",0,0,"L");
+$pdf->Cell(5,$fs," : ",0,0,"L");
+for ($ul=0;$ul<2;$ul++){
+	$pdf->Cell(5,$fs,"",1,0,"L");
+}
+$pdf->Cell(15,$fs,"",0,0,"L");
+$pdf->Cell(60,$fs,"",1,0,"L");
+$pdf->Cell(35,$fs,"",0,0,"L");
+$pdf->Cell(5,$fs,"","R",1);
+$pdf->Cell(5,$fs,"","L");
+$pdf->Cell(60,$fs,"KECAMATAN",0,0,"L");
+$pdf->Cell(5,$fs," : ",0,0,"L");
+for ($ul=0;$ul<2;$ul++){
+	$pdf->Cell(5,$fs,"",1,0,"L");
+}
+$pdf->Cell(15,$fs,"",0,0,"L");
+$pdf->Cell(60,$fs,"",1,0,"L");
+$pdf->Cell(35,$fs,"",0,0,"L");
+$pdf->Cell(5,$fs,"","R",1);
+$pdf->Cell(5,$fs,"","L");
+$pdf->Cell(60,$fs,"KELURAHAN/DESA",0,0,"L");
+$pdf->Cell(5,$fs," : ",0,0,"L");
+for ($ul=0;$ul<4;$ul++){
+	$pdf->Cell(5,$fs,"",1,0,"L");
+}
+$pdf->Cell(5,$fs,"",0,0,"L");
+$pdf->Cell(60,$fs,"",1,0,"L");
+$pdf->Cell(35,$fs,"",0,0,"L");
+$pdf->Cell(5,$fs,"","R",1);
+
+$pdf->Cell(5,2,"","LB");
+$pdf->Cell(185,2,"","B",0,"L");
+$pdf->Cell(5,2,"","RB",1);
+$pdf->Cell(5,2,"","LT");
+$pdf->Cell(185,2,"","T",0,"L");
+$pdf->Cell(5,2,"","RT",1);
+
+$pdf->SetFont("Times","",10);
+$pdf->Cell(1,$fs,"","L");
+$pdf->Cell(40,$fs,"Nama Lengkap Pemohon",1,0,"L");
+$pdf->Cell(2,$fs,"");
+for ($ul=0;$ul<30;$ul++){
+	$pdf->Cell(5,$fs,"",1,0,"L");
+}
+$pdf->Cell(2,$fs,"","R",1);
+$pdf->Cell(195,1,"","LR",1);
+$pdf->Cell(1,$fs,"","L");
+$pdf->Cell(40,$fs,"NIK Pemohon",1,0,"L");
+$pdf->Cell(2,$fs,"");
+for ($ul=0;$ul<16;$ul++){
+	$pdf->Cell(5,$fs,"",1,0,"L");
+}
+$pdf->Cell(70,$fs,"",0);
+$pdf->Cell(2,$fs,"","R",1);
+$pdf->Cell(195,1,"","LR",1);
+
+$pdf->Cell(1,$fs,"","L");
+$pdf->Cell(40,$fs,"Nama Kepala Pemohon",1,0,"L");
+$pdf->Cell(2,$fs,"");
+for ($ul=0;$ul<30;$ul++){
+	$pdf->Cell(5,$fs,"",1,0,"L");
+}
+$pdf->Cell(2,$fs,"","R",1);
+$pdf->Cell(195,1,"","LR",1);
+$pdf->Cell(1,$fs,"","L");
+$pdf->Cell(40,$fs,"No. KK",1,0,"L");
+$pdf->Cell(2,$fs,"");
+for ($ul=0;$ul<16;$ul++){
+	$pdf->Cell(5,$fs,"",1,0,"L");
+}
+$pdf->Cell(70,$fs,"",0);
+$pdf->Cell(2,$fs,"","R",1);
+$pdf->Cell(195,1,"","LR",1);
+
+$pdf->Cell(1,$fs,"","L");
+$pdf->Cell(40,$fs,"Alamat",1,0,"L");
+$pdf->Cell(2,$fs,"");
+$pdf->Cell(100,$fs,"",1,0,"L");
+$pdf->Cell(10,$fs,"RT",0,0,"C");
+for ($ul=0;$ul<3;$ul++){
+	$pdf->Cell(5,$fs,"",1,0,"L");
+}
+$pdf->Cell(10,$fs,"RW",0,0,"C");
+for ($ul=0;$ul<3;$ul++){
+	$pdf->Cell(5,$fs,"",1,0,"L");
+}
+$pdf->Cell(2,$fs,"","R",1);
+$pdf->Cell(195,1,"","LR",1);
+
+$pdf->Cell(23,$fs,"","L",0,"C");
+$pdf->Cell(30,$fs,"a. Desa/Kelurahan",0,0,"L");
+$pdf->Cell(50,$fs,"",1,0,"C");
+$pdf->Cell(15,$fs,"",0,0,"C");
+$pdf->Cell(25,$fs,"b. Kecamatan",0,0,"L");
+$pdf->Cell(50,$fs,"",1,0,"C");
+$pdf->Cell(2,$fs,"","R",1);
+$pdf->Cell(195,1,"","LR",1);
+
+$pdf->Cell(23,$fs,"","L",0,"C");
+$pdf->Cell(30,$fs,"c. Kabupaten/Kota",0,0,"L");
+$pdf->Cell(50,$fs,"",1,0,"C");
+$pdf->Cell(15,$fs,"",0,0,"C");
+$pdf->Cell(25,$fs,"d. Propinsi",0,0,"L");
+$pdf->Cell(50,$fs,"",1,0,"C");
+$pdf->Cell(2,$fs,"","R",1);
+$pdf->Cell(195,1,"","LR",1);
+
+$pdf->Cell(23,$fs,"","L",0,"C");
+$pdf->Cell(30,$fs,"Kode Pos",0,0,"L");
+for ($ul=0;$ul<5;$ul++){
+	$pdf->Cell(5,$fs,"",1,0,"C");
+}
+$pdf->Cell(40,$fs,"",0,0,"C");
+$pdf->Cell(25,$fs,"Telepon",0,0,"L");
+$pdf->Cell(50,$fs,"",1,0,"C");
+$pdf->Cell(2,$fs,"","R",1);
+$pdf->Cell(195,1,"","LR",1);
+
+$pdf->Cell(1,$fs,"","L");
+$pdf->Cell(40,$fs,"Alasan Permohonan",1,0,"L");
+$pdf->Cell(2,$fs,"");
+$pdf->Cell(5,$fs,"",1,0,"L");
+$pdf->SetFont("Times","",7);
+$pdf->Cell(147,2,"1. Karena penambahan anggota keluarga (Kelahiran, Kedatangan)     3. Lainnya","R",1,"L");
+$pdf->Cell(48,2,"");
+$pdf->Cell(147,2,"2. Karena pengurangan anggota (Kematian, Kepindahan)","R",1,"L");
+$pdf->Cell(195,1,"","LR",1);
+
+$pdf->SetFont("Times","",10);
+$pdf->Cell(1,$fs,"","L");
+$pdf->Cell(40,$fs,"Jumlah Anggota Keluarga",1,0,"L");
+$pdf->Cell(2,$fs,"");
+$pdf->Cell(5,$fs,"",1,0,"L");
+$pdf->Cell(5,$fs,"",1,0,"L");
+$pdf->Cell(142,$fs,"Orang","R",1,"L");
+
+$pdf->Cell(5,2,"","LB");
+$pdf->Cell(185,2,"","B",0,"L");
+$pdf->Cell(5,2,"","RB",1);
+
+$pdf->ln(3);
+$pdf->SetFont("Times","B",11);
+
+$pdf->Cell(3,$fs,"");
+$pdf->Cell(192,$fs,"DAFTAR ANGGOTA KELUARGA PEMOHON (hanya diisi anggota keluarga saja)",0,1);
+$pdf->ln(3);
+
+$pdf->Cell(10,$fs,"NO",1,0,"C");
+$pdf->Cell(5,$fs,"");
+$pdf->Cell(80,$fs,"NIK",1,0,"C");
+$pdf->Cell(5,$fs,"");
+$pdf->Cell(95,$fs,"NAMA LENGKAP",1,1,"C");
+$pdf->ln(1);
+for ($li=0;$li<8;$li++){
+	for ($ul=0;$ul<2;$ul++){
+		$pdf->Cell(5,$fs,"",1);
+	}
+	$pdf->Cell(5,$fs,"");
+	for ($ul=0;$ul<16;$ul++){
+		$pdf->Cell(5,$fs,"",1);
+	}
+	$pdf->Cell(5,$fs,"");
+	$pdf->Cell(95,$fs,"",1,1);
+	$pdf->ln(1);	
+}
+$pdf->SetFont("Times","",9);
+$pdf->ln(5);
+$pdf->Cell(55,$fs,"Kepala Dinas Kependudukan dan",0,0,"C");
+$pdf->Cell(45,$fs,"mengetahui,",0,0,"C");
+$pdf->Cell(50,$fs,"",0,0,"C");
+$pdf->Cell(45,$fs,"..........., ......................2020",0,1,"C");
+$pdf->Cell(55,$fs,"Pencatatan Sipil Kabupaten Gunungkidul",0,0,"C");
+$pdf->Cell(45,$fs,"Camat ...........................",0,0,"C");
+$pdf->Cell(50,$fs,"Kepala Dusun/Lurah...............",0,0,"C");
+$pdf->Cell(45,$fs,"Pemohon",0,1,"C");
+$pdf->ln(13);
+$pdf->SetFont("Times","BU",9);
+$pdf->Cell(55,$fs,".......................................................",0,0,"C");
+$pdf->Cell(45,$fs,"..................................................",0,0,"C");
+$pdf->Cell(50,$fs,"..............................................",0,0,"C");
+$pdf->Cell(45,$fs,"..............................................",0,1,"C");
+$pdf->SetFont("Times","B",9);
+$pdf->Cell(55,$fs,"      NIP :",0,0,"L");
+$pdf->Cell(45,$fs,"   NIP :",0,0,"L");
+$pdf->Cell(55,$fs,"        NIP :",0,0,"L");
+$pdf->Cell(45,$fs,"NIP :",0,1,"L");
+$pdf->SetFont("Times","",9);
+$pdf->ln(5);
+$pdf->Cell(120,$fs,"");
+$pdf->Cell(75,$fs,"Tanggal Pemasukkan Data",0,1,"L");
+$pdf->Cell(120,$fs,"");
+$pdf->Cell(10,$fs,"Tgl",0,0,"L");
+$pdf->Cell(5,$fs,"",1,0,"L");
+$pdf->Cell(5,$fs,"",1,0,"L");
+$pdf->Cell(5,$fs,"",0,0,"L");
+$pdf->Cell(10,$fs,"Bln",0,0,"L");
+$pdf->Cell(5,$fs,"",1,0,"L");
+$pdf->Cell(5,$fs,"",1,0,"L");
+$pdf->Cell(5,$fs,"",0,0,"L");
+$pdf->Cell(10,$fs,"Thn",0,0,"L");
+$pdf->Cell(5,$fs,"",1,0,"L");
+$pdf->Cell(5,$fs,"",1,1,"L");
+$pdf->ln(1);
+$pdf->Cell(120,$fs,"");
+$pdf->Cell(20,$fs,"Paraf",0,0,"L");
+$pdf->Cell(10,$fs,"",0,0,"L");
+$pdf->Cell(30,$fs,"",1,1,"L");
+
 $pdf->Output("berkas_permohonan_ktp.pdf","I");
 
 ?>
