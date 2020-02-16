@@ -112,35 +112,36 @@ $pdf->SetFont('Times','',12);
 $pdf->Cell(75,5,"  *) ",0,1,"L");
 $pdf->ln(2);
 //Data Ayah
-$pdf->Cell(35,5,"Nama Ayah",0,0,"L");
+$pdf->Cell(40,5,"Nama Ayah",0,0,"L");
 $pdf->Cell(5,5," : ",0,0,"L");
 for ($ul=1;$ul<=18;$ul++){
 	$pdf->Cell(6,5,"",1,0,"L");	
 }
 $pdf->Cell(10,5,"",0,0,"L");
-$pdf->Cell(20,5,"Umur  ",0,0,"R");
+$pdf->Cell(15,5,"Umur  ",0,0,"R");
 for ($ul=1;$ul<=2;$ul++){
 	$pdf->Cell(5,5,"0",1,0,"L");	
 }
 $pdf->Cell(5,5,"th",0,1,"L");
 $pdf->Cell(40,5,"",0,0,"L");
+$pdf->Cell(5,5,"",0,0,"L");
 for ($ul=1;$ul<=18;$ul++){
 	$pdf->Cell(6,5,"",1,0,"L");	
 }
 $pdf->Cell(15,5,"",0,1,"L");
 $pdf->ln(2);
-$pdf->Cell(35,5,"NIK ",0,0,"L");
+$pdf->Cell(40,5,"NIK ",0,0,"L");
 $pdf->Cell(5,5," : ",0,0,"L");
 for ($ul=1;$ul<=16;$ul++){
 	$pdf->Cell(6,5,"",1,0,"L");	
 }
 $pdf->Cell(15,5,"",0,1,"L");
 $pdf->ln(2);
-$pdf->Cell(35,5,"Pekerjaan ",0,0,"L");
+$pdf->Cell(40,5,"Pekerjaan ",0,0,"L");
 $pdf->Cell(5,5," : ",0,0,"C");
 $pdf->Cell(110,5,".......................................................................................................",0,1,"L");
 $pdf->ln(2);
-$pdf->Cell(35,5,"Alamat Rumah",0,0,"L");
+$pdf->Cell(40,5,"Alamat Rumah",0,0,"L");
 $pdf->Cell(5,5," : ",0,0,"C");
 $pdf->Cell(60,5,"Padukuhan : ....................................",0,0,"L");
 $pdf->Cell(10,5," RT ",0,0,"C");
@@ -153,7 +154,7 @@ for ($ul=1;$ul<=2;$ul++){
 }
 $pdf->Cell(5,5,"",0,1,"C");
 $pdf->ln(1);
-$pdf->Cell(35,5,"",0,0,"L");
+$pdf->Cell(40,5,"",0,0,"L");
 $pdf->Cell(5,5,"",0,0,"C");
 $pdf->Cell(50,5,"Desa: ....................................",0,0,"L");
 $pdf->Cell(50,5,"Kecamatan: ....................................",0,0,"L");
@@ -161,35 +162,36 @@ $pdf->Cell(5,5,"",0,1,"C");
 $pdf->ln(2);
 
 //Data Ibu
-$pdf->Cell(35,5,"Nama Istri/Ibu",0,0,"L");
+$pdf->Cell(40,5,"Nama Istri/Ibu",0,0,"L");
 $pdf->Cell(5,5," : ",0,0,"L");
 for ($ul=1;$ul<=18;$ul++){
 	$pdf->Cell(6,5,"",1,0,"L");	
 }
 $pdf->Cell(10,5,"",0,0,"L");
-$pdf->Cell(20,5,"Umur  ",0,0,"R");
+$pdf->Cell(15,5,"Umur  ",0,0,"R");
 for ($ul=1;$ul<=2;$ul++){
 	$pdf->Cell(5,5,"0",1,0,"L");	
 }
 $pdf->Cell(5,5,"th",0,1,"L");
 $pdf->Cell(40,5,"",0,0,"L");
+$pdf->Cell(5,5,"",0,0,"L");
 for ($ul=1;$ul<=18;$ul++){
 	$pdf->Cell(6,5,"",1,0,"L");	
 }
 $pdf->Cell(15,5,"",0,1,"L");
 $pdf->ln(2);
-$pdf->Cell(35,5,"NIK ",0,0,"L");
+$pdf->Cell(40,5,"NIK ",0,0,"L");
 $pdf->Cell(5,5," : ",0,0,"L");
 for ($ul=1;$ul<=16;$ul++){
 	$pdf->Cell(6,5,"",1,0,"L");	
 }
 $pdf->Cell(15,5,"",0,1,"L");
 $pdf->ln(2);
-$pdf->Cell(35,5,"Pekerjaan ",0,0,"L");
+$pdf->Cell(40,5,"Pekerjaan ",0,0,"L");
 $pdf->Cell(5,5," : ",0,0,"C");
 $pdf->Cell(110,5,".......................................................................................................",0,1,"L");
 $pdf->ln(2);
-$pdf->Cell(35,5,"Alamat Rumah",0,0,"L");
+$pdf->Cell(40,5,"Alamat Rumah",0,0,"L");
 $pdf->Cell(5,5," : ",0,0,"C");
 $pdf->Cell(60,5,"Padukuhan : ....................................",0,0,"L");
 $pdf->Cell(10,5," RT ",0,0,"C");
@@ -202,12 +204,96 @@ for ($ul=1;$ul<=2;$ul++){
 }
 $pdf->Cell(5,5,"",0,1,"C");
 $pdf->ln(1);
-$pdf->Cell(35,5,"",0,0,"L");
+$pdf->Cell(40,5,"",0,0,"L");
 $pdf->Cell(5,5,"",0,0,"C");
 $pdf->Cell(50,5,"Desa: ....................................",0,0,"L");
 $pdf->Cell(50,5,"Kecamatan: ....................................",0,0,"L");
 $pdf->Cell(5,5,"",0,1,"C");
 $pdf->ln(2);
+$pdf->Cell(55,5,"Kawin syah di KUA/Gereja/Pure",0,0,"L");
+$pdf->Cell(15,5,"    *) ",0,0,"L");
+$pdf->Cell(20,5,"Tanggal: ",0,0,"L");
+for ($ul=1;$ul<=2;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(5,5,"",0,0,"C");
+for ($ul=1;$ul<=2;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(5,5,"",0,0,"C");
+for ($ul=1;$ul<=4;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(5,5,"",0,1,"C");
+$pdf->ln(1);
+$pdf->Cell(40,5,"Anak yang dilahirkan ",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(30,5,"Laki - laki  /  Perempuan",0,1,"L");
+$pdf->ln(1);
+//Data Anak
+$pdf->Cell(40,5,"Nama Anak",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"L");
+for ($ul=1;$ul<=23;$ul++){
+	$ul==23 ? $pdf->Cell(6,5,"",1,1,"L") : $pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(40,5,"",0,0,"L");
+$pdf->Cell(5,5," ",0,0,"L");
+for ($ul=1;$ul<=23;$ul++){
+	$ul==23 ? $pdf->Cell(6,5,"",1,1,"L") : $pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->ln(2);
+$pdf->Cell(40,5,"NIK ",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"L");
+for ($ul=1;$ul<=16;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(15,5,"",0,1,"L");
+$pdf->ln(2);
+$pdf->Cell(40,5,"Tempat lahir",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(50,5,"............................................",0,1,"L");
+$pdf->ln(1);
+$pdf->Cell(40,5,"Hari lahir",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(50,5,"............................................",0,0,"L");
+$pdf->Cell(8,5,"",0,0,"C");
+$pdf->Cell(15,5,"Tanggal ");
+$pdf->Cell(5,5," : ",0,0,"C");
+for ($ul=1;$ul<=2;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(5,5,"",0,0,"C");
+for ($ul=1;$ul<=2;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(5,5,"",0,0,"C");
+for ($ul=1;$ul<=4;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(5,5,"",0,1,"C");
+$pdf->ln(1);
+$pdf->Cell(40,5,"Jam",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(50,5,"............................................",0,0,"L");
+$pdf->Cell(8,5,"",0,0,"C");
+$pdf->Cell(15,5,"Anak Ke ");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(45,5,".......................... (......................)",0,1,"L");
+$pdf->ln(1);
+$pdf->Cell(40,5,"Yang melaporkan",0,0,"L");
+$pdf->Cell(5,5," : ",0,1,"C");
+$pdf->Cell(40,5,"Nama ",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"L");
+for ($ul=1;$ul<=18;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(10,5,"",0,0,"L");
+$pdf->Cell(15,5,"Umur  ",0,0,"R");
+for ($ul=1;$ul<=2;$ul++){
+	$pdf->Cell(5,5,"0",1,0,"L");	
+}
+$pdf->Cell(5,5,"th",0,1,"L");
+
 $pdf->Output("berkas_permohonan_ktp.pdf","I");
 
 ?>
