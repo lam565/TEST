@@ -10,7 +10,7 @@ require "connect.php";
 $pdf = new FPDF('P','mm',array(215,330));
 $pdf->AddPage();
 
-$pdf->Image('logo.jpg',20,10,23,23);
+$pdf->Image('logo.jpg',20,10,20,23);
 $pdf->SetFont('Times','B',14);
 $pdf->ln(2);
 $pdf->Cell(195,6,'PEMERINTAH KABUPATEN GUNUNG KIDUL',0,1,'C');
@@ -86,7 +86,128 @@ $pdf->Cell(85,5,'Kepala Desa,',0,1,'C');
 $pdf->ln(10);
 
 $pdf->AddPage();
+$pdf->SetFont('Times','B',12);
+$pdf->Cell(195,5,"PEMERINTAH KABUPATEN GUNUNG KIDUL",0,1,"L");
+$pdf->Cell(120,5,"DINAS KEPENDUDUKAN DAN PENCATATAN SIPIL",0,0,"L");
+$pdf->SetFont('Times','',12);
+$pdf->Cell(30,5,"Nomor Akta ",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(40,5,"....................................",0,1,"L");
+$pdf->SetFont('Times','',11);
+$pdf->Cell(120,5,"Alamat: Jl. Ksatrian No. 36, Wonosari, Gunung Kidul, Kode Pos 55813",0,0,"L");
+$pdf->SetFont('Times','',12);
+$pdf->Cell(30,5,"Tanggal ",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(40,5,"....................................",0,1,"L");
+$pdf->SetFont('Times','',11);
+$pdf->Cell(120,5,"Telp: (0274) 391287, Fax: (0274) 391287",0,0,"L");
+$pdf->SetFont('Times','',12);
+$pdf->Cell(30,5,"Nomor Urut ",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(40,5,"....................................",0,1,"L");
+$pdf->ln(3);
+$pdf->SetFont('Times','BU',12);
+$pdf->Cell(120,5,"LAPORAN KELAHIRAN : UMUM",0,0,"R");
+$pdf->SetFont('Times','',12);
+$pdf->Cell(75,5,"  *) ",0,1,"L");
+$pdf->ln(2);
+//Data Ayah
+$pdf->Cell(35,5,"Nama Ayah",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"L");
+for ($ul=1;$ul<=18;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(10,5,"",0,0,"L");
+$pdf->Cell(20,5,"Umur  ",0,0,"R");
+for ($ul=1;$ul<=2;$ul++){
+	$pdf->Cell(5,5,"0",1,0,"L");	
+}
+$pdf->Cell(5,5,"th",0,1,"L");
+$pdf->Cell(40,5,"",0,0,"L");
+for ($ul=1;$ul<=18;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(15,5,"",0,1,"L");
+$pdf->ln(2);
+$pdf->Cell(35,5,"NIK ",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"L");
+for ($ul=1;$ul<=16;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(15,5,"",0,1,"L");
+$pdf->ln(2);
+$pdf->Cell(35,5,"Pekerjaan ",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(110,5,".......................................................................................................",0,1,"L");
+$pdf->ln(2);
+$pdf->Cell(35,5,"Alamat Rumah",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(60,5,"Padukuhan : ....................................",0,0,"L");
+$pdf->Cell(10,5," RT ",0,0,"C");
+for ($ul=1;$ul<=2;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(10,5," RW ",0,0,"C");
+for ($ul=1;$ul<=2;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(5,5,"",0,1,"C");
+$pdf->ln(1);
+$pdf->Cell(35,5,"",0,0,"L");
+$pdf->Cell(5,5,"",0,0,"C");
+$pdf->Cell(50,5,"Desa: ....................................",0,0,"L");
+$pdf->Cell(50,5,"Kecamatan: ....................................",0,0,"L");
+$pdf->Cell(5,5,"",0,1,"C");
+$pdf->ln(2);
 
+//Data Ibu
+$pdf->Cell(35,5,"Nama Istri/Ibu",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"L");
+for ($ul=1;$ul<=18;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(10,5,"",0,0,"L");
+$pdf->Cell(20,5,"Umur  ",0,0,"R");
+for ($ul=1;$ul<=2;$ul++){
+	$pdf->Cell(5,5,"0",1,0,"L");	
+}
+$pdf->Cell(5,5,"th",0,1,"L");
+$pdf->Cell(40,5,"",0,0,"L");
+for ($ul=1;$ul<=18;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(15,5,"",0,1,"L");
+$pdf->ln(2);
+$pdf->Cell(35,5,"NIK ",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"L");
+for ($ul=1;$ul<=16;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(15,5,"",0,1,"L");
+$pdf->ln(2);
+$pdf->Cell(35,5,"Pekerjaan ",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(110,5,".......................................................................................................",0,1,"L");
+$pdf->ln(2);
+$pdf->Cell(35,5,"Alamat Rumah",0,0,"L");
+$pdf->Cell(5,5," : ",0,0,"C");
+$pdf->Cell(60,5,"Padukuhan : ....................................",0,0,"L");
+$pdf->Cell(10,5," RT ",0,0,"C");
+for ($ul=1;$ul<=2;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(10,5," RW ",0,0,"C");
+for ($ul=1;$ul<=2;$ul++){
+	$pdf->Cell(6,5,"",1,0,"L");	
+}
+$pdf->Cell(5,5,"",0,1,"C");
+$pdf->ln(1);
+$pdf->Cell(35,5,"",0,0,"L");
+$pdf->Cell(5,5,"",0,0,"C");
+$pdf->Cell(50,5,"Desa: ....................................",0,0,"L");
+$pdf->Cell(50,5,"Kecamatan: ....................................",0,0,"L");
+$pdf->Cell(5,5,"",0,1,"C");
+$pdf->ln(2);
 $pdf->Output("berkas_permohonan_ktp.pdf","I");
 
 ?>
